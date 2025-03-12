@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", serif;
+}
+
+.show-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 300px;
+  position: relative;
+  border-bottom: 1px solid #dcdcdc;
+  margin-top: 30px;
+}
+
+.blog-title-container {
+  font-size: 36px;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  margin-left: 38px;
+
+}
+
+.blog-banner-container {
+  width: 840px;
+}
+
+.blog-banner-container img{
+  width: 100%;
+  border-radius: 18px;
+}
+
+.blog-story-container {
+  margin-top: 36px;
+  font-size: 18px;
+  font-weight: 300;
+  margin-left: 38px;
+}
+
+.edit{
+  border: none;
+  padding: 8px;
+  color: #828080;
+  border-radius: 18px;
+  position: absolute;
+  left: 340px;
+  bottom: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.edit:hover{
+  background-color: #828080;
+  color: #fff;
+
+}
+
+.delete{
+  border: none;
+  padding: 8px;
+  color: #828080;
+  border-radius: 18px;
+  position: absolute;
+  margin-top: 120px;
+  left: 380px;
+  bottom: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.delete:hover{
+  background-color: #828080;
+  color: #ffff;
+}
+
+.comment-container{
+  margin: 0 300px;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  position: relative;
+}
+
+.comment-heading{
+  margin-left: 300px;
+  margin-top: 16px;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.username-container{
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.comment-text-container{
+  font-weight: 300;
+  color: #434242;
+}
+
+.comment-edit{
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  border: none;
+  padding: 8px;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.comment-edit:hover{
+  background-color: #4b4444;
+  color: #ffff;
+}
+
+.comment-delete{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: none;
+  padding: 8px;
+  color: 828080;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.comment-delete:hover{
+  background-color: #4b4444;
+  color: #fff;
+}
+
+.add-comment-container{
+  width: 150px;
+  margin-left: 310px;
+  margin-top: 20px;
+}
+/* 
+.profile-picture-container{
+  width: 40px;
+}
+
+.profile-img-container{
+  width: 100%
+}
+
+.profile-img-container img{
+  width: 100%;
+  border-radius: 50%;
+} */
+
+.blog-date-show {
+  font-size: 14px;
+  color: grey;
+  margin-right: 700px;
+  margin-bottom: 8px;
+  margin-top: -30px;
+}
+
+.blog-date-show-comment {
+  font-size: 10px;
+  color: grey;
+  margin-top: 5px;
+  margin-bottom: -4px;
+}
+
+/* Main Container */
+.show-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 300px;
+  position: relative;
+  border-bottom: 1px solid #dcdcdc;
+  margin-top: 60px !important; /* Keeping a proper gap from navbar */
+}
+
+/* Blog Title */
+.blog-title-container {
+  font-size: 36px !important;
+  font-weight: 800 !important;
+  text-transform: capitalize;
+  margin-bottom: 40px !important;
+  margin-left: 38px !important;
+  text-align: center !important;
+}
+
+/* Blog Banner */
+.blog-banner-container {
+  width: 840px !important;
+}
+
+.blog-banner-container img {
+  width: 100% !important;
+  border-radius: 18px !important;
+}
+
+/* Blog Story */
+.blog-story-container {
+  margin-top: 36px !important;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+  margin-left: 38px !important;
+  text-align: justify !important;
+}
+
+/* Edit & Delete Buttons */
+.edit, .delete {
+  border: none !important;
+  padding: 8px !important;
+  color: #828080 !important;
+  border-radius: 18px !important;
+  cursor: pointer !important;
+  transition: 0.2s !important;
+  font-size: 14px !important;
+  position: relative !important;
+  margin: 10px !important;
+}
+
+.edit:hover, .delete:hover {
+  background-color: #828080 !important;
+  color: #fff !important;
+}
+
+/* Comment Section */
+.comment-container {
+  width: 100% !important;
+  max-width: 800px !important;
+  border-top: 1px solid #dcdcdc !important;
+  border-bottom: 1px solid #dcdcdc !important;
+  padding: 20px !important;
+  margin: 30px auto !important;
+  text-align: center !important;
+  display: block !important; /* Ensure visibility on all screens */
+}
+
+/* Comment Heading */
+.comment-heading {
+  font-size: 28px !important;
+  font-weight: 600 !important;
+  margin-bottom: 16px !important;
+}
+
+/* Individual Comment */
+.username-container {
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+
+.comment-text-container {
+  font-weight: 300 !important;
+  color: #434242 !important;
+}
+
+/* Comment Buttons */
+.comment-edit, .comment-delete {
+  border: none !important;
+  padding: 6px 12px !important;
+  border-radius: 18px !important;
+  cursor: pointer !important;
+  transition: 0.2s !important;
+  font-size: 14px !important;
+  display: inline-block !important;
+  margin: 5px !important;
+}
+
+.comment-edit:hover {
+  background-color: #4b4444 !important;
+  color: #fff !important;
+}
+
+.comment-delete:hover {
+  background-color: #721c24 !important;
+  color: #fff !important;
+}
+
+/* Add Comment */
+.add-comment-container {
+  width: 100% !important;
+  max-width: 400px !important;
+  margin: 20px auto !important;
+}
+
+/* Blog Date */
+.blog-date-show {
+  font-size: 14px !important;
+  color: grey !important;
+  text-align: center !important;
+  margin-bottom: 8px !important;
+  margin-top: -30px !important;
+}
+
+/* 🔥 RESPONSIVE DESIGN */
+@media screen and (max-width: 1024px) {
+  .show-main-container {
+    padding: 28px 10% !important;
+  }
+  .blog-title-container {
+    font-size: 32px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .show-main-container {
+    padding: 28px 5% !important;
+  }
+  .blog-title-container {
+    font-size: 28px !important;
+  }
+  .blog-story-container {
+    font-size: 16px !important;
+  }
+  .comment-container {
+    max-width: 90% !important;
+    padding: 10px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .show-main-container {
+    padding: 20px !important;
+  }
+  .blog-title-container {
+    font-size: 24px !important;
+  }
+  .blog-story-container {
+    font-size: 15px !important;
+  }
+  .comment-container {
+    max-width: 95% !important;
+    padding: 8px !important;
+    display: block !important;
+  }
+  .edit, .delete {
+    font-size: 12px !important;
+    padding: 6px 10px !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .show-main-container {
+    padding: 15px !important;
+  }
+  .blog-title-container {
+    font-size: 20px !important;
+  }
+  .blog-story-container {
+    font-size: 14px !important;
+  }
+  .comment-container {
+    max-width: 100% !important;
+    padding: 5px !important;
+    display: block !important; /* Ensuring visibility */
+  }
+  .comment-edit, .comment-delete {
+    padding: 5px 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+/* Default Styles (Keep Your Existing Code Here) */
+
+/* Responsive Styles */
+@media screen and (max-width: 480px) {
+  
+  /* ✅ Make the blog image responsive */
+  .blog-banner-container {
+    width: 100% !important; /* Adjust width according to the device */
+    max-width: 320px !important; /* Prevent it from being too large */
+  }
+  
+  .blog-banner-container img {
+    width: 100% !important;
+    height: auto !important; /* Maintain aspect ratio */
+    border-radius: 12px !important;
+  }
+
+  /* ✅ Fix Comment Heading Position */
+  .comment-heading {
+    text-align: center !important;
+    margin-left: 0 !important;
+    font-size: 20px !important;
+  }
+
+  /* ✅ Ensure the date is visible */
+  .blog-date-show {
+    font-size: 12px !important;
+    color: grey !important;
+    text-align: center !important; /* Center align */
+    margin: 10px 0 !important; /* Add spacing */
+    display: block !important; /* Ensure it remains visible */
+  }
+}

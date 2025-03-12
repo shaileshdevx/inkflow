@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<div class="comment-container">
+  <form action="/blogs/<%= blogId %>/comments" method="POST">
+    <input type="text" name="text" placeholder="Comment">
+    <button class="add-comment" type="submit">ADD</button>
+
+    <input type="hidden" name="blogId" value="<%= blogId %>">
+  </form>
+</div>
+

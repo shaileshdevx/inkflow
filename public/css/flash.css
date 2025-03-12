@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", serif;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.error-flash {
+  background-color: #073147e0;
+  backdrop-filter: blur(10px);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  width: auto;
+  padding: 8px 16px;
+  border-radius: 16px;
+  position: absolute;
+  top: 10px;
+  right: 4px;
+  z-index: 999;
+  
+  /* Apply animation */
+  animation: slideInRight 0.5s ease-out;
+}
+
+.flash-btn{
+  border: none;
+  border-radius: 16px;
+  font-size: 12px;
+  padding: 3px 8px;
+  background: #f75454ba;
+  color: #fff;
+  position: relative;
+}
+
+
+.success-flash{
+  background-color: #58854f;
+  backdrop-filter: blur(10px);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  width: auto;
+  padding: 8px 16px;
+  border-radius: 16px;
+  position: absolute;
+  top: 10px;
+  right: 4px;
+  z-index: 999;
+  animation: slideInRight 0.5s ease-out;
+}
+
+
+
+/* For small mobiles */
+@media screen and (max-width: 480px)
+{
+  .error-flash {
+    padding: 4px 16px;
+    position: fixed;
+    
+    /* Apply animation */
+    animation: slideInRight 0.5s ease-out;
+  }
+  .success-flash{
+    padding: 4px 16px;
+    position: fixed;
+  }
+}
+
+/* For small mobiles */
+
+/* for large mobiles */
+
+@media screen and (max-width: 768px) and (min-width: 481px)
+{
+  .error-flash {
+    padding: 4px 16px;
+    position: fixed;
+    
+    /* Apply animation */
+    animation: slideInRight 0.5s ease-out;
+  }
+  .success-flash{
+    padding: 4px 16px;
+    position: fixed;
+  }
+}
+
+/* for large mobiles */
+
+/* for tablets */
+@media screen and (max-width: 1024px) and (min-width: 769px)
+{
+
+  .error-flash {
+    padding: 4px 16px;
+    position: fixed;
+    
+    /* Apply animation */
+    animation: slideInRight 0.5s ease-out;
+  }
+  .success-flash{
+    padding: 4px 16px;
+    position: fixed;
+  }
+
+}
+/* for tablets */

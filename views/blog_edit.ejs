@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<form action="/blogs/<%= blog._id %>?_method=PUT" method="POST">
+  <!-- <label for="publisher">Publisher</label>
+  <input type="text" name="publisher" autofocus> -->
+
+  <!-- <label for="title">Title</label> -->
+  <input class="title" type="text" name="title" placeholder="Title" value="<%= blog.title %>">
+<!-- 
+  <label for="subTitle">Description</label> -->
+  <textarea class="story" type="text" name="subTitle" placeholder="Tell your story..."><%= blog.subTitle %></textarea>
+
+  <input class="blog-banner" type="text" name="blogBanner" placeholder="Paste your blog banner link" value="<%= blog.blogBanner %>">
+
+  <button class="publish" type="submit">Update</button>
+</form>
+
+
+<%-include('partials/footer') %>

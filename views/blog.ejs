@@ -1,0 +1,79 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+
+<!-- navbar -->
+<!-- 
+<div class="blog-navbar">
+
+
+  <div class="left-container">
+    <div class="logo-container">
+      Inkflow
+    </div>
+    <div class="search-bar-container">
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i> <input type="text">
+      </div>
+    </div>
+  </div>
+  
+  <div class="right-container">
+    <div class="add-blog-container">
+      <div class="write">
+        <i class="fa-solid fa-pen-to-square"></i> <p><a href="/blogs/new">Write</a></p>
+      </div>
+    </div>
+    <a href="/logout">
+      <div class="account-container">
+        Log out
+      </div>
+    </a>
+    
+  </div>
+</div> -->
+
+<!-- navbar -->
+
+
+
+ <div class="main-content-container">
+  <% blogs.forEach((blog) => { %>
+    <a href="/blogs/<%= blog._id %>">
+      <div class="left-content-container">
+        <div class="blog-container">
+          <div class="blog-publisher-owner">
+            <p>by <%= blog.owner.username %></p>
+          </div>
+          <div class="blog-title">
+            <%= blog.title %>
+          </div>
+          <div class="blog-short-description">
+            <%= blog.subTitle %>
+          </div>
+      
+          <div class="blog-details-container">
+            <div class="blog-publish-date"><i class="fa-regular fa-calendar"></i> <%= blog.createdAt.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) %>
+            </div>
+            <div class="blog-claps"><i class="fa-solid fa-hands-clapping"></i>535</div>
+            <div class="blog-comments"><i class="fa-solid fa-comment"></i><%= comments.length %></div>
+          </div>
+    
+          
+        </div>
+    
+        <div class="blog-poster">
+          <img src="<%= blog.blogBanner %>" alt="blog-poster">
+        </div>
+        
+      </div>
+    </a>
+   
+  <% }) %>
+  
+
+</div>
+
+
+
+<%- include('partials/footer') %>

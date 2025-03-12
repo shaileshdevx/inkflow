@@ -1,0 +1,89 @@
+<div class="blog-navbar">
+  <div class="left-container">
+    <a href="/">
+      <div class="logo-container">
+        Inkflow
+      </div>
+    </a>
+    <button class="s-btn" onclick="showSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <button class="c-btn" onclick="hideSearch()"><i class="fa-solid fa-circle-xmark"></i></button>
+    <div class="search-bar-container">
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass search-btn"></i> <input type="text">
+      </div>
+    </div>
+
+    <div class="search-bar-container-mobile">
+      <div class="search-bar-mobile">
+        <i class="fa-solid fa-magnifying-glass search-btn"></i> <input type="text">
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="right-container">
+    <div class="add-blog-container">
+      <div class="write">
+        <i class="fa-solid fa-pen-to-square"></i> <p><a href="/blogs/new">Write</a></p>
+      </div>
+    </div>
+    <a href="/logout">
+      <div class="account-container">
+        Log out
+      </div>
+    </a>
+    
+  </div>
+
+  
+  <% if(successMessage && successMessage.length > 0) { %>
+    <div class="success-flash flashMessage">
+      <button class="flash-btn">X</button>
+      <%= successMessage %>
+      </div>
+  <% } %>
+  
+  <% if(errorMessage && errorMessage.length > 0) { %>
+    <div class="error-flash flashMessage">
+      <button class="flash-btn">X</button>
+
+      <%= errorMessage %>
+      </div>
+  <% } %>
+
+</div>
+
+<script>
+  const showSearch = () => {
+    const sBtn = document.querySelector('.s-btn');
+    const cBtn = document.querySelector('.c-btn');
+    sBtn.addEventListener('click', () => {
+      const search = document.querySelector('.search-bar-container-mobile')
+      search.style.display = 'flex'
+      sBtn.style.display = 'none'
+      cBtn.style.display = 'flex'
+    })
+
+  }
+
+  const hideSearch = () => {
+    const cBtn = document.querySelector('.c-btn');
+    const sBtn = document.querySelector('.s-btn');
+    cBtn.addEventListener('click', () => {
+      const search = document.querySelector('.search-bar-container-mobile')
+      search.style.display = 'none'
+      cBtn.style.display = 'none'
+      sBtn.style.display = 'flex'
+    })
+  }
+</script>
+
+
+
+
+
+
+
+
+
+

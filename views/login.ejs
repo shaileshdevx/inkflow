@@ -1,0 +1,50 @@
+<%- include('partials/header') %>
+<div class="register-container">
+
+  
+  <% if(successMessage && successMessage.length > 0) { %>
+    <div class="success-flash flashMessage">
+      <button class="flash-btn">X</button>
+
+      <%= successMessage %>
+      </div>
+  <% } %>
+  
+  <% if(errorMessage && errorMessage.length > 0) { %>
+    <div class="error-flash flashMessage">
+      <button class="flash-btn">X</button>
+
+      <%= errorMessage %>
+      </div>
+  <% } %>
+
+
+  
+    
+    
+      
+  <div class="logo-container-signup">
+    <a href="/">Inkflow</a>
+  </div>
+  <form action="/login" method="POST">
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button type="submit" class="signup-btn">Log in</button>
+
+
+  </form>
+  <div class="login-page-container">
+    <div class="login-link">
+    </div>
+  </div>
+
+  <div class="img-container">
+    <img src="https://miro.medium.com/v2/format:webp/4*SdjkdS98aKH76I8eD0_qjw.png" alt="">
+  </div>
+</div>
+
+
+
+
+
+
