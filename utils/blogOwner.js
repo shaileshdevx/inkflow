@@ -1,6 +1,5 @@
 const Blog = require('../models/blog');
 
-
 const checkBlogOwner = async (req, res, next) => {
   if(req.isAuthenticated()) {  // check if the user is logged in 
     // if they logged in check if they own the post
