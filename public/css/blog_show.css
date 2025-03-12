@@ -220,7 +220,7 @@
   cursor: pointer !important;
   transition: 0.2s !important;
   font-size: 14px !important;
-  position: relative !important;
+  position: absolute !important;
   margin: 10px !important;
 }
 
@@ -342,7 +342,17 @@
     font-size: 12px !important;
     padding: 6px 10px !important;
   }
-}
+
+  .edit{
+    position: relative;
+    left: 34px;
+  }
+
+  .delete{
+    position: relative;
+    left: 0;
+  }
+} 
 
 @media screen and (max-width: 320px) {
   .show-main-container {
@@ -363,6 +373,8 @@
     padding: 5px 8px !important;
     font-size: 12px !important;
   }
+
+ 
 }
 
 
