@@ -10,7 +10,13 @@ const LocalStrategy = require('passport-local').Strategy;
 const expressSession = require('express-session');
 
 // config imports
-const config = require('./config');
+let config;
+try{
+  config = require('./config');
+} catch(e) {
+  console.log("Could not importing config. This probably means you are not working locallly")
+  console.log(e)
+}
 
 // routes imports
 const mainRoute = require('./routes/main');
@@ -24,13 +30,18 @@ const Comment = require('./models/Comment');
 const User = require('./models/User');
 
 // mongodb connect
-mongoose.connect(config.db.connection, {
-  // useNewUrlParser: true,
-  // useUnifiedTopology: true,
-  // // useCreateIndex: true
-})
-.then(() => console.log('Shaileshdev database connected 😎'))
-.catch((error) => console.log('Shaileshdev database connection error 😓', error));
+
+try{
+  mongoose.connect(config.db.connection, {
+
+  })
+  .then(() => console.log('Shaileshdev database connected 😎'))
+  .catch((error) => console.log('Shaileshdev database connection error 😓', error));  
+} catch(e) {
+  console.log('Could not connect config. This probably means you are not working locally')
+  mongoose.connect(process.env.DB_CONNECTION_STRING)
+}
+
 
 // other config
 app.set('view engine', 'ejs');
@@ -41,7 +52,7 @@ app.use(methodOverride('_method'));
 // express Session config
 
 app.use(expressSession({
-  secret: 'oieqwurpoeriopueradfsuyfoew',
+  secret: process.env.ES_SECRET || config.expressSession.secret,
   resave: false,
   saveUninitialized: false
 }));
@@ -71,9 +82,9 @@ app.use(commentRoute);
 app.use(accountRoute);
 
 
-const port = process.env.PORT || 5000;
+
 
 // Listen Port
-app.listen(port, () => {
-  console.log(`Server is listening on ${port}`);
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Server is listening`);
 });
