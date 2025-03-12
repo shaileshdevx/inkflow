@@ -71,9 +71,9 @@ app.use(commentRoute);
 app.use(accountRoute);
 
 
-
+const port = process.env.PORT || 5000;
 
 // Listen Port
-app.listen(5000, () => {
-  console.log('Server is listening on 5000');
+app.listen(port, () => {
+  console.log(`Server is listening on ${port}`);
 });
