@@ -210,17 +210,11 @@
   font-weight: 700;
 }
 
-.search-bar-container{
-  background-color: #f6f2f2;
-  padding: 4px;
-  border-radius: 9px;
-  display: none;
-}
 
 .search-bar-container-mobile{
   display: none;
-  position: absolute;
-  left: 120px;
+  position: relative;
+  left: 50px !important;
   width: 50px;
   top: 42px;
   margin-right: 20px;
@@ -234,9 +228,13 @@
 }
 
 .s-btn{
-  border: none;
+  border: none; 
   background-color: transparent;
   visibility: visible;
+}
+
+.search-bar-container{
+  display: none;
 }
 
 .search-bar-mobile input{
@@ -249,10 +247,9 @@
 }
 
 .c-btn{
-  /* display: none; */
-  border: none;
   background-color: transparent;
-  visibility: visible;
+  visibility: hidden;
+  border: none;
 }
 
 
@@ -298,8 +295,8 @@
   
   .search-bar-container-mobile{
     display: none;
-    position: absolute;
-    left: 50px;
+    position: relative;
+    left: 50px !important;
   }
   
   .search-btn{
@@ -310,7 +307,7 @@
   }
   
   .s-btn{
-     border: none; 
+    border: none; 
     background-color: transparent;
     visibility: visible;
   }
@@ -325,10 +322,9 @@
   }
   
   .c-btn{
-    /* display: none; */
-    border: none;
     background-color: transparent;
-    visibility: visible;
+    visibility: hidden;
+    border: none;
   }
 
     
@@ -440,7 +436,7 @@
   .search-bar-container-mobile{
     display: none;
     position: absolute;
-    left: 180px;
+    left: 220px;
     width: 50px;
     top: 0;
     margin-right: 20px;
@@ -469,12 +465,10 @@
   }
   
   .c-btn{
-    /* display: none; */
-    border: none;
     background-color: transparent;
-    visibility: visible;
+    visibility: hidden;
+    border: none;
   }
-  
   
   .left-content-container {
     width: 300px;

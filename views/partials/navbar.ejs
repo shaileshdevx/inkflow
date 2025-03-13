@@ -58,10 +58,10 @@
     const sBtn = document.querySelector('.s-btn');
     const cBtn = document.querySelector('.c-btn');
     sBtn.addEventListener('click', () => {
-      const search = document.querySelector('.search-bar-container-mobile')
-      search.style.display = 'flex'
-      sBtn.style.display = 'none'
-      cBtn.style.display = 'flex'
+      const searchBar = document.querySelector('.search-bar-container-mobile')
+      searchBar.style.display = 'flex'
+      cBtn.style.visibility = 'visible'
+      sBtn.style.visibility = 'hidden'
     })
 
   }
@@ -70,10 +70,10 @@
     const cBtn = document.querySelector('.c-btn');
     const sBtn = document.querySelector('.s-btn');
     cBtn.addEventListener('click', () => {
-      const search = document.querySelector('.search-bar-container-mobile')
-      search.style.display = 'none'
-      cBtn.style.display = 'none'
-      sBtn.style.display = 'flex'
+      const searchBar = document.querySelector('.search-bar-container-mobile')
+      searchBar.style.display = 'none'
+      cBtn.style.visibility = 'hidden'
+      sBtn.style.visibility = 'visible'
     })
   }
 </script>
