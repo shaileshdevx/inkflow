@@ -124,7 +124,8 @@ html, body {
 
   .login-link{
     position: unset;
-    margin-top: -40px;
+    margin-top: -30px;
+    margin-right: 100px;
   }
   
   .login-link a{
